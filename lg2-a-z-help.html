@@ -1,0 +1,143 @@
+<body class="s-lib-public-body">
+{{skip_link}}
+<!-- BEGIN: Page Header -->
+{{public_header}}
+<!-- END: Page Header -->
+<!-- BEGIN: Content Header -->
+<div id="s-lib-public-header" class="s-lib-header container s-lib-side-borders">
+    <div id="s-lib-bc">
+        {{breadcrumbs}}
+    </div>
+    <h1 id="s-lib-public-header-title">{{page_title}}</h1>
+    <div id="s-lib-public-header-desc">{{page_description}}</div>
+</div>
+<!-- END: Content Header -->
+<!-- BEGIN: Nav Bar -->
+<div id="s-lib-public-nav" class="container s-lib-side-borders">
+    {{page_nav}}
+</div>
+<!-- END: Nav Bar -->
+<!-- BEGIN: content -->
+<div id="s-lib-public-main" class="s-lib-main container s-lib-side-borders">
+    <!-- BEGIN: custom help boxes -->
+    <section>
+        <div  id="s-lg-az-cols"  class="row">
+            <div  id="col1"  class="col-md-12 center">
+                <div  id="s-lg-az-filter-cols"  class="row row-eq-height">
+                    <div  id="col-starting"  class="col-md-4 center">
+                        <div id="s-lg-box-starting" class="s-lib-box s-lib-box-std">
+                            <h2 class="s-lib-box-title">Starting Points</h2>
+                            <div id="s-lg-box-collapse-starting">
+                                <div class="s-lib-box-content">
+                                    <div id="s-lg-content-starting" class="  clearfix">
+                                        <p><a href="http://proxy.library.oregonstate.edu/login?url=http://search.ebscohost.com/login.aspx?authtype=ip,uid&amp;profile=ehost&amp;defaultdb=aph" target="_top">Academic Search Premier</a><br />
+                                            <a href="http://proxy.library.oregonstate.edu/login?url=http://isiknowledge.com/wos" target="_top">Web of Science</a><br>
+                                            <a href="http://scholar.google.com/" target="_top">Google Scholar</a><br>
+                                            <a href="http://search.library.oregonstate.edu/primo_library/libweb/action/search.do?vid=OSU" target="_top">1Search</a>
+                                        </p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div  id="col-help"  class="col-md-4 center">
+                        <div id="s-lg-box-help" class="s-lib-box s-lib-box-std">
+                            <h2 class="s-lib-box-title">Help</h2>
+                            <div id="s-lg-box-collapse-help">
+                                <div class="s-lib-box-content">
+                                    <div id="s-lg-content-help" class="  clearfix">
+                                        <p><a href="http://ica.library.oregonstate.edu/subject-guide/1271-OSU-Libraries-How-To-Guide" target="_top">OSU Libraries' How to Guide </a><br>
+                                            <a href="http://guides.library.oregonstate.edu" target="_top">Research Guides</a><br>
+                                            <a href="http://osulibrary.oregonstate.edu/offcampus/remote.htm" target="_top">Off-campus Access</a><br>
+                                            <a href="http://osulibrary.oregonstate.edu/collections/e-resource-guidelines" target="_top">Appropriate use of e-resources</a>
+                                        </p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div  id="col-legend"  class="col-md-4 center">
+                        <div id="s-lg-box-legend" class="s-lib-box s-lib-box-std">
+                            <h2 class="s-lib-box-title">Legend</h2>
+                            <div id="s-lg-box-collapse-legend">
+                                <div class="s-lib-box-content">
+                                    <div id="s-lg-content-legend" class="  clearfix">
+                                        <p><strong><a target="_blank" href="http://wpmu.library.oregonstate.edu/enews">Check out the Database News Blog</a></strong><br>
+                                        </p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- END: custom help boxes -->
+    <section>
+        <div  id="s-lg-az-search-bar"  class="row">
+            <div  id="az-search-col-1"  class="col-md-12 center">
+                {{navbar}}
+            </div>
+        </div>
+    </section>
+    <section>
+        <div  id="s-lg-az-cols"  class="row">
+            <div  id="col1"  class="col-md-8 center">
+                <div id="s-lg-az-filters" class="pad-right-sm pad-bottom-med">
+                    <section>
+                        <div  id="s-lg-az-filter-cols"  class="row">
+                            <div  id="col-subjects"  class="col-md-4 center">
+                                {{subject_list}}
+                            </div>
+                            <div  id="col-types"  class="col-md-4 center">
+                                {{type_list}}
+                            </div>
+                            <div  id="col-vendors"  class="col-md-4 center">
+                                {{vendor_list}}
+                            </div>
+                        </div>
+                    </section>
+                </div>
+                <div id="s-lg-az-index" class="pad-right-sm">
+                    {{alpha_list}}
+                </div>
+                <div id="s-lg-az-search-reset" class="pad-top-med pad-bottom-med">
+                    {{search_reset}}
+                </div>
+                <div id="s-lg-az-content" class="pad-right-sm pad-top-med">
+                    <div class="bold s-lib-color-lt-grey pad-top-med text-center">Loading...</div>
+                </div>
+            </div>
+            <div  id="col2"  class="col-md-4 center">
+                {{trials_box}}
+                {{content_box_experts}}
+                {{content_box_guides}}
+            </div>
+        </div>
+    </section>
+</div>
+<!-- END: content -->
+<!-- BEGIN: Page Footer -->
+{{system_footer}}
+<!-- END: Page Footer -->
+<div id="s-lib-alert" title="">
+    <div id="s-lib-alert-content"></div>
+</div>
+<div id="s-lib-popover-title" class="hide">
+    <span class="text-info"><strong>title</strong></span>
+    <button type="button" id="popclose" class="close" onclick="jQuery('.s-lib-popover').popover('hide')">&times;</button>
+</div>
+<div id="s-lib-popover-content" class="hide"><i class="fa fa-refresh fa-spin"></i> Loading...
+    <button class="btn btn-default btn-sm popclose" type="button">Close</button>
+</div>
+<div id="s-lib-scroll-top" title="Back to Top">
+				<span class="fa-stack fa-lg">
+				  <i class="fa fa-square-o fa-stack-2x"></i>
+				  <i class="fa fa-angle-double-up fa-stack-1x" style="position:relative; bottom:2px;"></i>
+				</span>
+</div>
+<!-- BEGIN: Custom Footer -->
+{{public_footer}}
+<!-- END: Custom Footer -->
+</body>

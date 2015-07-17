@@ -1,0 +1,33 @@
+<script type="text/javascript">
+    function send_to_primo() {
+        if ('' == document.forms["osul-search-library-form"]["query_temp"].value) {
+            alert('Please enter a search term.');
+        } else {
+            var query = 'http://search.library.oregonstate.edu/primo_library/libweb/action/dlSearch.do?' +
+                    '&search_scope=everything' +
+                    '&institution=OSU' +
+                    '&vid=OSU' +
+                    '&group=GUEST' +
+                    '&onCampus=true' +
+                    '&displayMode=full' +
+                    '&tab=default_tab' +
+                    '&query=any,contains,' + document.forms["osul-search-library-form"]["query_temp"].value;
+            window.location.assign(query);
+        }
+        return false;
+    }
+</script>
+<p>Something clever about using the search box. </p>
+<form class="osul-search-form" id="osul-search-library-form" accept-charset="UTF-8" onsubmit="return send_to_primo()">
+    <div>
+        <input id="query_temp"
+               placeholder="&quot;Use quotation marks for exact match&quot;"
+               class="form-control" type="text" name="query_temp" value=""
+               style="height: 30px;font-size: 1em;">
+        <input alt="search" type="submit" id="edit-submit" name="op" value="Search" class="btn btn-default btn-primary">
+    </div>
+</form>
+<div class="search-links">
+    <a href="http://search.library.oregonstate.edu/primo_library/libweb/action/search.do?mode=Advanced&amp;ct=AdvancedSearch&amp;vid=OSU">Advanced Search</a>
+    | <a href="http://guides.library.oregonstate.edu/Primo">Search tips</a>
+</div>

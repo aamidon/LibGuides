@@ -1,0 +1,361 @@
+<link href="//netdna.bootstrapcdn.com/twitter-bootstrap/2.3.2/css/bootstrap-combined.no-icons.min.css"
+      media="all" rel="stylesheet"/>
+<link href="//fonts.googleapis.com/css?family=Gudea:400,400italic,700"
+      media="all" rel="stylesheet"/>
+<link href="//osulibrary.oregonstate.edu/templates/doug_fir/css/osul-all.min.css"
+      media="all" rel="stylesheet"/>
+<link href="//osulibrary.oregonstate.edu/templates/doug_fir/css/content.css"
+      media="all" rel="stylesheet"/>
+<link href="//library.oregonstate.edu/sites/all/modules/quicktabs/css/quicktabs.css"
+      media="all" rel="stylesheet"/>
+<link href="//library.oregonstate.edu/sites/all/modules/custom/osul_search/css/osul_search.css"
+      media="all" rel="stylesheet"/>
+<link href="//library.oregonstate.edu/sites/all/modules/quicktabs/quicktabs_tabstyles/tabstyles/osulp/osulp.css"
+      media="all" rel="stylesheet"/>
+
+<style type="text/css">
+
+body {
+    padding: 0;
+}
+
+/*.container, .navbar-static-top .container, .navbar-fixed-top .container, .navbar-fixed-bottom .container {*/
+    /*width: 980px;*/
+/*}*/
+
+/*#page, #footer {*/
+    /*width: 985px;*/
+/*}*/
+
+.outerbox {
+    padding: 1px;
+    font: inherit;
+    margin-bottom: 8px;
+    background-color: #CCC;
+}
+
+.innerbox, .profilecontent {
+    font: 14px "Gudea", "Arial", "Verdana", sans-serif;
+}
+
+#wrapper, #container {
+    background: transparent;
+    width: 100%;
+}
+
+#nav {
+    margin-bottom: 45px;
+}
+
+#block-megamenu-menu-menu-osul .content {
+    margin: 0.4em 0 0.5em 0;
+}
+
+.breadcrumbs, #breadcrumbsl, #breadcrumbsr {
+    font-weight: normal;
+}
+
+.topnav {
+    padding-left: 10px;
+    padding-top: 0;
+}
+
+#body {
+    background: transparent;
+    border: none;
+    box-shadow: none;
+}
+
+.stitle {
+    margin-bottom: 0;
+    background: transparent;
+    border-bottom: none;
+    width: 975px;
+    padding: 4px 0 3px 10px;
+}
+
+#guide_tab_title_bar {
+    display: none;
+}
+
+/*#guide_tab_title_bar_page_name {
+    display: none;
+    }
+#guide_tab_title_bar_page_comments, #guide_tab_title_bar_page_print {
+    font: normal 12px trebuchet ms,Arial,Helvetica,sans-serif;
+    }*/
+#tabsI {
+    border-bottom: none;
+    width: 985px;
+    font: bold 15px "Gudea", "Arial", "Verdana", sans-serif;
+    /*tabs
+     border-bottom: 1px solid #8F8F8F;*/
+    border-bottom: 1px solid #CCCCCC;
+}
+
+#tabsI ul {
+    padding: 8px 0 0 0;
+    /*padding: 0;
+     background-color: #EAEAEA;
+     display: inline-block;
+     width: 980px;
+     margin: 0 5px;*/
+}
+
+#tabsI a {
+    /*background: url("http://ajax.googleapis.com/ajax/libs/jqueryui/1.8.15/themes/base/images/ui-bg_glass_75_e6e6e6_1x400.png") repeat-x scroll 50% 50% #E6E6E6;*/
+    /*background: -moz-linear-gradient(center top , #cccccc 0%, #e6e6e6 70%) repeat scroll 0 0 transparent !important;*/
+    background-color: transparent;
+    background-image: none;
+    padding-left: 0;
+    margin-left: 0;
+}
+
+#tabsI a span {
+    /*color: #c34500;
+     background-color: transparent;
+     background-image: none;
+     padding: 6px 12px 5px;
+     border-radius: 0;
+     border: none;*/
+    background: #4B4B4B;
+    /*border: 1px solid #AAAAAA;
+     border: 1px solid #8f8f8f;*/
+    border: 1px solid #999;
+    border-bottom: 0;
+    border-top-left-radius: 6px;
+    border-top-right-radius: 6px;
+    padding: 6px 9px 5px;
+    color: #ffffff;
+}
+
+/*#tabsI a:hover span, #tabs12 a:hover span {
+    color: #c34500;
+    }*/
+#tabsI #current a, #tabsI .current a, #tabs12 #current a, #tabs12 .current a, #tabsI #current a span, #tabsI .current a span, #tabs12 #current a span, #tabs12 .current a span {
+    background: inherit;
+}
+
+#tabsI #current a span {
+    margin-bottom: -1px;
+    /*background-color: transparent;
+     color: #5C2651;
+     border-bottom: none;
+     background: #ffffff;
+     border-bottom: 1px solid #F5F5F5;*/
+    background-color: #EAEAEA;
+    color: #561F4B;
+    border: 1px solid #CCC;
+    border-bottom: 1px solid #EAEAEA;
+}
+
+.dropmenudiv {
+    font: bold 14px "Gudea", "Arial", "Verdana", sans-serif;
+    line-height: 19px;
+}
+
+.dropmenudiv a {
+    padding: 2px;
+    font-weight: normal;
+}
+
+#lgsearch_label {
+    display: none;
+}
+
+#content {
+    overflow: hidden;
+    padding: 8px 4px 8px 5px;
+    width: 976px;
+    border: 0;
+    background-color: #EAEAEA;
+    border-bottom: 1px solid #CCC;
+}
+
+#main_profile_content {
+    background: #ffffff;
+    border-top: 4px solid #561F4B;
+}
+
+.cg_home_table td {
+    background-color: #5C2651;
+    padding: 4px 0 0 0;
+    border: 0;
+}
+
+.cg_home_table td div {
+    margin-left: 4px;
+    color: #ffffff;
+}
+
+.cg_home_table {
+    background-color: transparent;
+}
+
+.headerbox {
+    background-image: none;
+    margin-bottom: 0;
+    padding: 3px 6px;
+    background-color: #561F4B;
+}
+
+.headerbox h2 {
+    color: #ffffff;
+    font: 16px "Gudea", "Arial", "Verdana", sans-serif;
+}
+
+.innerbox ul, .profilecontent ul {
+    padding-left: 15px;
+    margin-left: 0;
+}
+
+.innerbox li, .profilecontent li {
+    margin: 0 0 .5em 0;
+}
+
+.resdesc, .helpdesc, .linkdesc {
+    font: 14px "Gudea", "Arial", "Verdana", sans-serif;
+}
+
+#guide_header_title h1 {
+    display: block;
+    padding-top: 5px;
+}
+
+.guidedesc, .pagedesc {
+    color: #4d4d4d;
+    font: 14px "Gudea", "Arial", "Verdana", sans-serif;
+    padding: 1px 0 0 8px;
+}
+
+.guideattr {
+    color: #4d4d4d;
+    font-family: 14px "Gudea", "Arial", "Verdana", sans-serif;
+}
+
+#lgfooter {
+    color: #fff;
+    font-size: 14px;
+    line-height: 18px;
+    padding: 20px 0 20px 20px;
+    background: #39393a;
+    background: url(data:image/svg+xml;base64,PD94bWwgdmVyc2lvbj0iMS4wIiA/Pgo8c3ZnIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyIgd2lkdGg9IjEwMCUiIGhlaWdodD0iMTAwJSIgdmlld0JveD0iMCAwIDEgMSIgcHJlc2VydmVBc3BlY3RSYXRpbz0ibm9uZSI+CiAgPGxpbmVhckdyYWRpZW50IGlkPSJncmFkLXVjZ2ctZ2VuZXJhdGVkIiBncmFkaWVudFVuaXRzPSJ1c2VyU3BhY2VPblVzZSIgeDE9IjAlIiB5MT0iMCUiIHgyPSIwJSIgeTI9IjEwMCUiPgogICAgPHN0b3Agb2Zmc2V0PSIwJSIgc3RvcC1jb2xvcj0iIzM5MzkzYSIgc3RvcC1vcGFjaXR5PSIxIi8+CiAgICA8c3RvcCBvZmZzZXQ9IjEwMCUiIHN0b3AtY29sb3I9IiMyNTI1MjUiIHN0b3Atb3BhY2l0eT0iMSIvPgogIDwvbGluZWFyR3JhZGllbnQ+CiAgPHJlY3QgeD0iMCIgeT0iMCIgd2lkdGg9IjEiIGhlaWdodD0iMSIgZmlsbD0idXJsKCNncmFkLXVjZ2ctZ2VuZXJhdGVkKSIgLz4KPC9zdmc+);
+    background: -moz-linear-gradient(top, #39393a 0%, #252525 100%);
+    background: -webkit-gradient(linear, left top, left bottom, color-stop(0%, #39393a), color-stop(100%, #252525));
+    background: -webkit-linear-gradient(top, #39393a 0%, #252525 100%);
+    background: -o-linear-gradient(top, #39393a 0%, #252525 100%);
+    background: -ms-linear-gradient(top, #39393a 0%, #252525 100%);
+    background: linear-gradient(top, #39393a 0%, #252525 100%);
+    min-height: 148px;
+    border-top: 4px solid #DBD6D0;
+}
+
+#lgfooter a {
+    color: #fff;
+}
+
+#lgfooter a:hover, #lgfooter a:active, #lgfooter a:focus {
+    background-color: #666;
+    text-decoration: none;
+    border-radius: 3px;
+}
+
+.tundra #footer {
+    background: #ffffff;
+    color: inherit;
+    min-height: 0;
+    font-size: 13px;
+    border-top: none;
+    text-align: left;
+    width: 965px;
+    padding: 20px 0 20px 10px;
+}
+
+.tundra #footer a {
+    color: #C34500;
+}
+
+.tundra #footer a:hover {
+    color: #005580;
+    background-color: transparent;
+}
+
+#register_php #footer {
+    background: transparent;
+}
+
+.search input {
+    width: auto;
+}
+
+input.searchField {
+    background-image: none;
+}
+
+.boxeditlink {
+    color: gold;
+    font-weight: normal;
+    font-size: 11px;
+}
+
+.boxeditlink:hover, .boxeditlink:visited {
+    color: gold;
+}
+</style>
+
+<!-- jquery.columns was written by Karl Swedberg. See the file source for more attribution information -->
+<script src="https://demo.libguides.com/data/custom/1/jquery.columns.js"></script>
+<script src="//code.jquery.com/ui/1.11.2/jquery-ui.js"></script>
+<script type="text/javascript">
+    (function ($) {
+        $(document).ready(function () {
+            $('#myScript').remove();
+            // creates the columns through the column plug loaded above
+            $('.mylist').columns({columns: 2});
+
+            // 'hide' function is called on each of the 'ul' elements with the class 'guide_links'
+            $('ul.guide_links').hide();
+
+            // DOM insert a link element inside of each of the subject list items.
+            $('li.subject_link').prepend('<a href="javascript://toggle guide links" class="toggle_button">+</a>');
+
+            // enable toggle action on each Subject LI
+            $('li.subject_link').bind("click", function () {
+                // toggles text in the link between '+' and '-'.
+                if ($(this).children('a.toggle_button').text() == '+') {
+                    $(this).children('a.toggle_button').text('-');
+                } else {
+                    $(this).children('a.toggle_button').text('+');
+                }
+                // Toggle the child 'ul' element
+                $(this).children('ul.guide_links').slideToggle("fast");
+            });
+
+            $('a.subject_link_a').contents().unwrap();
+
+            $('#quicktabs-osu_library_search').tabs({
+                activate: function( event, ui ) {
+                    // Set clicked tab to active.
+                    ui.oldTab.removeClass('active');
+                    ui.newTab.addClass('active');
+                }
+            });
+
+            searchSubmit = function(event, url) {
+                // Stitch together the search string
+                event.preventDefault();
+                var extra = '';
+                if ($(this).closest('form[id]').attr('id') == 'osul-search-library-form') {
+                    $('input[name=query]').val('any,contains,' + $('input[name=query_temp]').val().replace(/,/g,' '));
+                } else {
+                    extra = '&query=any,contains,' + $('input[name=query_temp_reserve]').val().replace(/,/g,' ');
+                }
+                window.location = "http://search.library.oregonstate.edu/primo_library/libweb/action/dlSearch.do?" + $(this).serialize() + extra;
+            }
+
+            $('#osul-search-library-form').submit(searchSubmit);
+            $('#osul-search-reserves-form').submit(searchSubmit);
+
+        });
+    })(jQuery);
+</script>
