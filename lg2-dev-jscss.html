@@ -1228,7 +1228,7 @@ input#query_temp, input#query_temp_reserve {
     height: 25px;
 }
 
-form#osul-search-library-form, form#osul-search-reserves-form {
+form#osul-search-library-form {
 	float: left;
 	width: 75%;
 	margin: 0;
@@ -1244,7 +1244,7 @@ div.search-links {
 	color: #FFFFFF;
 	text-decoration: none;
 	display: block;
-	margin: 0 0 0 5px;
+	margin: 0 0 0 5;
 	padding: 0;
 	line-height: 16px;
 }
@@ -1279,7 +1279,7 @@ ul.nav {
 </style>
 <script type="text/javascript">
 $(document).ready(function () {
-
+    
     searchSubmit = function (event, url) {
         // Stitch together the search string
         event.preventDefault();
@@ -1291,9 +1291,9 @@ $(document).ready(function () {
         }
         window.location = "http://search.library.oregonstate.edu/primo_library/libweb/action/dlSearch.do?" + $(this).serialize() + extra;
     };
-
+    
     $('#osul-search-library-form').submit(searchSubmit);
     $('#osul-search-reserves-form').submit(searchSubmit);
-
+    
 });
 </script>
