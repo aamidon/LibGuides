@@ -4,6 +4,7 @@
       media="all" rel="stylesheet"/>
 <link href="//osulibrary.oregonstate.edu/templates/doug_fir/css/content.css"
       media="all" rel="stylesheet"/>
+<link rel="shortcut icon" href="http://library.oregonstate.edu/sites/all/themes/doug_fir_library/favicon.ico" />
 <style type="text/css">
 
 @font-face {
@@ -1280,6 +1281,28 @@ ul.nav {
     background-color: #FFFFFF;
 }
 
+.right-tabs > .nav-pills > li > a {
+    color: #FFFFFF;
+}
+a.btn.btn-info {
+    background: none;
+    background-color: #403152;
+}
+.alert-info {
+    background-color: #DDDDDD;
+    color:  #000000;
+    border:  none;
+}
+/* SpringShare CSS sets this background color with !important so we have to override with our !important */
+button.btn-primary {
+    background: none;
+    background-color: #403152!important;
+    color:  #FFFFFF;
+}
+/* this addresses the inline style that sets the info div to min-width of 400px Thanks SpringShare! */
+div.popover {
+    min-width: 430px;
+}
 </style>
 <script type="text/javascript">
 $(document).ready(function () {
