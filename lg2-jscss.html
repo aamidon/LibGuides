@@ -21,10 +21,6 @@ body {
     background: url(//osulibrary.oregonstate.edu/sites/all/themes/doug_fir/images/bg-pattern.jpg) repeat #f4f2ec;
 }
 
-#s-lib-footer-public {
-    display: none;
-}
-
 .s-lib-box>h2.s-lib-box-title {
     font-family: "Helvetica Neue",Helvetica,Arial,sans-serif;
     font-size:  1em;
@@ -217,14 +213,14 @@ div.content {
     display: none;
 }
 @media (max-width: 480px) {
-    
+
     #mobile-menu {
         position: absolute;
         z-index: 999;
         top: 40px;
         padding: 0px 8px;
     }
-    
+
     #mobile-menu .menu {
         -webkit-border-radius: 0;
         -moz-border-radius: 0;
@@ -771,15 +767,15 @@ h2.pane-title {
     display: none;
 }
 @media (max-width: 767px) {
-    
+
     #osu-top-hat {
         height: 40px;
     }
-    
+
     #osu-top-hat ul.menu {
         display: none;
     }
-    
+
     #osu-top-hat #mobile-icon-menu {
         background: transparent;
         color: #fff;
@@ -790,13 +786,13 @@ h2.pane-title {
         top: 10px;
         z-index: 300;
     }
-    
+
     #osu-top-hat #mobile-icon-menu .icon-search {
         font-size: 18px;
     }
 }
 @media (max-width: 480px) {
-    
+
     #osu-top-hat {
         background-color: #ba4100;
         background-image: -moz-linear-gradient(top, #c34500, #ae3d00);
@@ -811,20 +807,20 @@ h2.pane-title {
         border-bottom: none;
         text-align: left;
     }
-    
+
     #osu-top-hat .container {
         padding: 10px 0 0 10px;
     }
-    
+
     #osu-top-hat .tag {
         margin-left: 0;
         float: none;
     }
-    
+
     #osu-top-hat .tag .logo {
         display: none;
     }
-    
+
     #osu-top-hat .tag .mobile-header {
         display: inline-block;
         color: #fff;
@@ -1230,24 +1226,24 @@ input#query_temp, input#query_temp_reserve {
 }
 
 form#osul-search-library-form, form#osul-search-reserves-form {
-	float: left;
-	width: 75%;
-	margin: 0;
+    float: left;
+    width: 75%;
+    margin: 0;
 }
 div.search-links {
-	display: inline-block;
-	width: 25%;
+    display: inline-block;
+    width: 25%;
 }
 
 .search-links > a {
-	font-size: 0.7em;
-	font-weight: normal;
-	color: #FFFFFF;
-	text-decoration: none;
-	display: block;
-	margin: 0 0 0 5px;
-	padding: 0;
-	line-height: 16px;
+    font-size: 0.7em;
+    font-weight: normal;
+    color: #FFFFFF;
+    text-decoration: none;
+    display: block;
+    margin: 0 0 0 5px;
+    padding: 0;
+    line-height: 16px;
 }
 
 .form-submit {
@@ -1293,34 +1289,32 @@ a.btn.btn-info {
     color:  #000000;
     border:  none;
 }
-/* SpringShare CSS sets this background color with !important so we have to override with our !important */
 button.btn-primary {
     background: none;
     background-color: #403152!important;
     color:  #FFFFFF;
 }
-/* this addresses the inline style that sets the info div to min-width of 400px Thanks SpringShare! */
 div.popover {
     min-width: 430px;
 }
 </style>
 <script type="text/javascript">
-$(document).ready(function () {
+    $(document).ready(function () {
 
-    searchSubmit = function (event, url) {
-        // Stitch together the search string
-        event.preventDefault();
-        var extra = '';
-        if ($(this).closest('form[id]').attr('id') == 'osul-search-library-form') {
-            $('input[name=query]').val('any,contains,' + $('input[name=query_temp]').val().replace(/,/g, ' '));
-        } else {
-            extra = '&query=any,contains,' + $('input[name=query_temp_reserve]').val().replace(/,/g, ' ');
-        }
-        window.location = "http://search.library.oregonstate.edu/primo_library/libweb/action/dlSearch.do?" + $(this).serialize() + extra;
-    };
+        searchSubmit = function (event, url) {
+            // Stitch together the search string
+            event.preventDefault();
+            var extra = '';
+            if ($(this).closest('form[id]').attr('id') == 'osul-search-library-form') {
+                $('input[name=query]').val('any,contains,' + $('input[name=query_temp]').val().replace(/,/g, ' '));
+            } else {
+                extra = '&query=any,contains,' + $('input[name=query_temp_reserve]').val().replace(/,/g, ' ');
+            }
+            window.location = "http://search.library.oregonstate.edu/primo_library/libweb/action/dlSearch.do?" + $(this).serialize() + extra;
+        };
 
-    $('#osul-search-library-form').submit(searchSubmit);
-    $('#osul-search-reserves-form').submit(searchSubmit);
+        $('#osul-search-library-form').submit(searchSubmit);
+        $('#osul-search-reserves-form').submit(searchSubmit);
 
-});
+    });
 </script>
