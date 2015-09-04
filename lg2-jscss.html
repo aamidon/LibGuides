@@ -72,7 +72,6 @@ a.label.label-info {
 }
 
 input#s-lg-guide-search {
-    height: inherit;
     width: 100%;
 }
 
@@ -1192,9 +1191,6 @@ h2.pane-title {
 .nav {
     margin-bottom: 0;
 }
-div.tab-content {
-    height: 45px;
-}
 div.right-tabs {
     width: 450px;
     float: right;
@@ -1269,6 +1265,7 @@ div.search-links {
     padding-top: 4px;
     padding-bottom: 4px;
     text-decoration: none;
+    border-radius: 0;
 }
 ul.nav {
     font-size: 0.85em;
@@ -1294,9 +1291,36 @@ button.btn-primary {
     background-color: #403152!important;
     color:  #FFFFFF;
 }
+
 div.popover {
     min-width: 430px;
 }
+
+/* Lets the subject/database lists height adjust automatically */
+div.tab-content {
+    height: auto;
+}
+
+/* Fixes the height for the search box tab now that div.tab-content is auto, above */
+#main-menu div.tab-content {
+    height: 45px;
+}
+
+/* Gives the placeholder text some "room" */
+input[type="text"] {
+    padding:  14px 10px;
+}
+
+/* Gives the "Display:" label and dropdown enough space to fit on the same line */
+label.control-label.col-md-3 {
+    width: 25%;
+}
+
+/* Needed to get the Subject Homepage URLs to fit in the box */
+div[id^='s-lib-panel-container-collapse'] a {
+    font-size:  0.9em;
+}
+
 </style>
 <script type="text/javascript">
     $(document).ready(function () {
