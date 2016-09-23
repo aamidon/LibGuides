@@ -1,1299 +1,332 @@
-<link href="//netdna.bootstrapcdn.com/twitter-bootstrap/2.3.2/css/bootstrap-combined.no-icons.min.css"
-      media="all" rel="stylesheet"/>
-<link href="//fonts.googleapis.com/css?family=Gudea:400,400italic,700"
-      media="all" rel="stylesheet"/>
-<link href="//osulibrary.oregonstate.edu/templates/doug_fir/css/content.css"
-      media="all" rel="stylesheet"/>
-<style type="text/css">
-
-@font-face {
-    font-family: 'EksjaExtremesRegular';
-    src: url(http://oregonstate.edu/osuhomepage/css/fonts/Eksja/Eksja-regular-webfont.eot);
-    src: local('☺'), url(http://oregonstate.edu/osuhomepage/css/fonts/Eksja/Eksja-regular-webfont.woff) format('woff'), url(http://oregonstate.edu/osuhomepage/css/fonts/Eksja/Eksja-regular-webfont.ttf) format('truetype'), url(http://oregonstate.edu/osuhomepage/css/fonts/Eksja/Eksja-regular-webfont.svg#webfont) format('svg');
-    font-weight: normal;
-    font-style: normal;
-}
-
-body {
-    padding-left: 0;
-    padding-right: 0;
-    background: url(//osulibrary.oregonstate.edu/sites/all/themes/doug_fir/images/bg-pattern.jpg) repeat #f4f2ec;
-}
-
-#s-lib-footer-public {
-    display: none;
-}
-
-.s-lib-box>h2.s-lib-box-title {
-    font-family: "Helvetica Neue",Helvetica,Arial,sans-serif;
-    font-size:  1em;
-    font-weight: normal;
-    background: #561F48;
-    color:  #FFFFFF;
-}
-
-.s-lib-profile-email>a {
-    font-size:  1em !important;
-}
-
-#lgfooter {
-    background-color: #000000;
-}
-
-#lgfooter .content {
-    color:  #ffffff;
-}
-
-.container {
-    padding:  0;
-}
-
-.row {
-    margin-left: 0;
-    margin-right: 0;
-}
-
-#s-lg-guide-tabs-title-bar {
-    border:  none;
-}
-
-#s-lg-guide-main {
-    border:  1px solid #cccccc;
-    padding: 5px 0;
-}
-
-#s-lg-guide-desc-container {
-    padding:  5px 0;
-}
-
-a.label.label-info {
-    padding: 10px;
-}
-
-#s-lg-hp-nav-bottom form {
-    margin-bottom: 0;
-}
-
-input#s-lg-guide-search {
-    height: inherit;
-    width: 100%;
-}
-
-#s-lg-content-starting a, #s-lg-content-help a, #s-lg-content-legend a {
-    font-size:  0.8em;
-}
-
-#col-starting h2, #col-help h2, #col-legend h2 {
-    background: #561F48;
-    color: #ffffff;
-}
-
-
-._osul [class^="icon-"]:before, ._osul [class*=" icon-"]:before {
-    font-weight: normal;
-    font-style: normal;
-    display: inline-block;
-    text-decoration: inherit;
-}
-._osul a [class^="icon-"], ._osul a [class*=" icon-"] {
-    display: inline-block;
-    text-decoration: inherit;
-}
-._osul .icon-large:before {
-    vertical-align: middle;
-    font-size: 1.3333333333333333em;
-}
-._osul .btn [class^="icon-"], ._osul .nav-tabs [class^="icon-"], ._osul .btn [class*=" icon-"], ._osul .nav-tabs [class*=" icon-"] {
-    line-height: .9em;
-}
-._osul li [class^="icon-"], ._osul li [class*=" icon-"] {
-    display: inline-block;
-    width: 1.25em;
-    text-align: center;
-}
-._osul li .icon-large:before, ._osul li .icon-large:before {
-    width: 1.875em;
-}
-._osul ul.icons {
-    list-style-type: none;
-    margin-left: 2em;
-    text-indent: -0.8em;
-}
-._osul ul.icons li [class^="icon-"], ._osul ul.icons li [class*=" icon-"] {
-    width: .8em;
-}
-._osul ul.icons li .icon-large:before, ._osul ul.icons li .icon-large:before {
-    vertical-align: initial;
-}
-._osul .icon-search:before {
-    content: "\f002";
-}
-._osul .icon-reorder:before {
-    content: "\f0c9";
-}
-
-._osul [class^="icon-"], ._osul [class*=" icon-"] {
-    font-style: normal;
-    font-weight: normal;
-}
-
-._osul .btn.dropdown-toggle [class^="icon-"], ._osul .btn.dropdown-toggle [class*=" icon-"] {
-    line-height: 1.4em;
-}
-
-._osul .icon-large {
-    font-size: 1.3333em;
-}
-
-._osul .icon-search {
-    *zoom: expression(this.runtimeStyle['zoom'] = '1',this.innerHTML = ' ');
-}
-
-._osul .icon-reorder {
-    *zoom: expression(this.runtimeStyle['zoom'] = '1',this.innerHTML = ' ');
-}
-
-#footer {
-    color: #fff;
-    font-size: 14px;
-    line-height: 18px;
-    padding: 20px 0 20px 20px;
-    background: #39393a;
-    background: url(data:image/svg+xml;base64,PD94bWwgdmVyc2lvbj0iMS4wIiA/Pgo8c3ZnIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyIgd2lkdGg9IjEwMCUiIGhlaWdodD0iMTAwJSIgdmlld0JveD0iMCAwIDEgMSIgcHJlc2VydmVBc3BlY3RSYXRpbz0ibm9uZSI+CiAgPGxpbmVhckdyYWRpZW50IGlkPSJncmFkLXVjZ2ctZ2VuZXJhdGVkIiBncmFkaWVudFVuaXRzPSJ1c2VyU3BhY2VPblVzZSIgeDE9IjAlIiB5MT0iMCUiIHgyPSIwJSIgeTI9IjEwMCUiPgogICAgPHN0b3Agb2Zmc2V0PSIwJSIgc3RvcC1jb2xvcj0iIzM5MzkzYSIgc3RvcC1vcGFjaXR5PSIxIi8+CiAgICA8c3RvcCBvZmZzZXQ9IjEwMCUiIHN0b3AtY29sb3I9IiMyNTI1MjUiIHN0b3Atb3BhY2l0eT0iMSIvPgogIDwvbGluZWFyR3JhZGllbnQ+CiAgPHJlY3QgeD0iMCIgeT0iMCIgd2lkdGg9IjEiIGhlaWdodD0iMSIgZmlsbD0idXJsKCNncmFkLXVjZ2ctZ2VuZXJhdGVkKSIgLz4KPC9zdmc+);
-    background: -moz-linear-gradient(top, #39393a 0%, #252525 100%);
-    background: -webkit-gradient(linear, left top, left bottom, color-stop(0%, #39393a), color-stop(100%, #252525));
-    background: -webkit-linear-gradient(top, #39393a 0%, #252525 100%);
-    background: -o-linear-gradient(top, #39393a 0%, #252525 100%);
-    background: -ms-linear-gradient(top, #39393a 0%, #252525 100%);
-    background: linear-gradient(top, #39393a 0%, #252525 100%);
-    min-height: 148px;
-    border-top: 4px solid #DBD6D0;
-}
-
-#footer a {
-    color: #fff;
-}
-
-#footer a:hover, #footer a:active, #footer a:focus {
-    background-color: #666;
-    text-decoration: none;
-    border-radius: 3px;
-}
-
-
-.social-media {
-    position: relative;
-    top:4px;
-}
-
-.social-media a {
-    background-image: url(//osulibrary.oregonstate.edu/sites/all/themes/doug_fir_library/images/socialnetworks.png);
-    display: block;
-    width: 16px;
-    height: 16px;
-    text-indent: -100px;
-    overflow: hidden;
-    margin: 2px 0;
-}
-
-.social-media .fb {
-    background-position: 0 32px;
-}
-
-.social-media .twitter {
-    background-position: 0 16px;
-}
-
-
-.ie #footer {
-    filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#39393a',endColorstr='#252525',GradientType=0);
-}
-
-div.content {
-    margin: 0.4em 0px 1em;
-}
-#mobile-menu {
-    display: none;
-}
-@media (max-width: 480px) {
-    
-    #mobile-menu {
-        position: absolute;
-        z-index: 999;
-        top: 40px;
-        padding: 0px 8px;
+<!-- CSS -->
+<style type="text/css" media="all">
+    @import url("//osulibrary.oregonstate.edu/modules/system/system.theme.css");
+</style>
+<style type="text/css" media="all">
+    @import url("//osulibrary.oregonstate.edu/sites/all/modules/nice_menus/css/nice_menus.css");
+    @import url("//osulibrary.oregonstate.edu/sites/all/modules/nice_menus/css/nice_menus_default.css");
+    @import url("//osulibrary.oregonstate.edu/sites/all/themes/doug-fir-drupal-7/css/variants/pine/pine.css");
+</style>
+<style type="text/css" media="all">
+    @import url("//osulibrary.oregonstate.edu/sites/all/themes/doug-fir-drupal-7/css/less/main.css");
+    @import url("//osulibrary.oregonstate.edu/sites/all/themes/doug-fir-d7-library/css/doug_fir_d7_library.css");
+</style>
+<style type="text/css" media="all">
+    @import url("//osulibrary.oregonstate.edu/sites/all/themes/doug-fir-drupal-7/bootstrap/css/responsive.css");
+    @import url("//osulibrary.oregonstate.edu/sites/all/themes/doug-fir-drupal-7/css/less/main-responsive.css");
+</style>
+<link href='http://fonts.googleapis.com/css?family=Gudea:400,400italic,700' rel='stylesheet' type='text/css'>
+<style>
+    /* Pine header & footer customizations */
+    html {
+        background-color: #292929;
     }
-    
-    #mobile-menu .menu {
+
+    body {
+        padding-left: 0;
+    }
+
+    .pine {
+        font-family: 'Gudea', Arial, Helvetica, Verdana, sans-serif;
+    }
+
+    .pine #page-wrapper.container-fluid {
+        padding-left: 0;
+    }
+
+    .pine #main-menu .menu, .pine #main-menu .nice-menu {
+        margin-left: 6em;
+    }
+
+    .pine #main-menu .nice-menu > li.menuparent a:hover {
+        background-color: #c34500;
+    }
+
+    .pine a#search-link {
+        display: none;
+    }
+
+    .pine #osu-top-hat.new #search-link i {
+        color: #c34500;
+        text-decoration: none;
+    }
+
+    .pine #osu-top-hat.new #search-link:hover i {
+        color: #ffffff;
+    }
+
+    .pine #main-menu .nice-menu span.nolink {
+        font-size: 16px;
+        text-transform: uppercase;
+        color: #252525;
+        border: none;
+        line-height: 16px;
+        margin: 0 2px;
+        display: inline-block;
+        padding: 10px 16px;
+    }
+
+    .pine #main-menu .nice-menu > li.menuparent:hover > span,
+    .pine #main-menu .nice-menu > li.over > span {
+        background: rgba(0, 0, 0, 0.85);
+        color: #fff;
+    }
+
+    /* Footer */
+    .pine #footer .content > .menu > li {
+        float: none;
+        margin-left: 0;
+        max-width: none;
+        padding: 0 0 3px 0;
+    }
+
+    .pine #footer .content > .menu > li > a {
+        font-size: 14px;
+        text-transform: none;
+        font-weight: normal;
+        text-decoration: underline;
+    }
+
+    .pine #footer a:hover, #footer a:active, #footer a:focus {
+        text-decoration: underline;
+        background-color: transparent;
+    }
+
+    .pine #footer .content hr {
+        border-top: 1px solid #c34500;
+        border-bottom: none;
+        margin: 10px 0;
+        width: 25%;
+    }
+
+    .pine #footer .block-menu .content {
+        margin-left: 3em;
+        margin-top: 0;
+    }
+
+    .pine #footer a.gift-btn {
+        font-size: 20px;
+        background-color: #c34500;
+        padding: 10px 20px;
+        text-decoration: none;
+    }
+
+    .pine [id^="osul-footer-"] {
+        float: left;
+        margin-right: 20px;
+    }
+
+    .pine [id^="osul-footer-"] h2 {
+        font-size: 16px;
+        font-weight: normal;
+        line-height: 30px;
+        margin-bottom: 12px;
+        padding: 0 10px 0 2px;
+    }
+
+    .pine #footer ul {
+        margin-left: 15px;
+        margin-bottom: 25px;
+    }
+
+    .pine #footer .footer-links .content {
+        margin: 0 0 0 10px;
+    }
+
+    .pine #footer div.footer-gift {
+        display: inline-block;
+    }
+
+    .pine #footer .social-media {
+        font-size: 18px;
+        padding-top: 15px;
+    }
+
+    .pine #footer .social-media a {
+        padding-bottom: 12px;
+    }
+
+    .pine #footer a i {
+        color: #ffffff;
+    }
+
+    /* LibAnswers-specific customizations */
+    body {
+        background: #ffffff;
+        font-size: 14px;
+    }
+
+    #s-lg-public-skiplink {
+        font-size: 9px;
+    }
+
+    a {
+        color: #c34500;
+    }
+
+    ul li {
+        list-style-image: none;
+    }
+
+    #s-lib-public-header-title {
+        display: none;
+    }
+
+    #s-lib-public-header,
+    #s-lib-public-nav,
+    #s-lib-public-main,
+    #s-lg-guide-header,
+    #s-lg-guide-tabs-title-bar,
+    #s-lg-side-nav-content {
+        margin-left: 15px;
+    }
+
+    #s-lib-bc .breadcrumb {
+        font-size: 12px;
+        font-weight: normal;
+    }
+
+    #s-lib-bc .breadcrumb > li {
+        text-shadow: none;
+    }
+
+    #s-lg-hp-nav {
+        background-color: #f5f2ed;
         -webkit-border-radius: 0;
         -moz-border-radius: 0;
         border-radius: 0;
     }
-}
 
-
-#main-menu .form-actions {
-    background-color: transparent;
-    padding: 0;
-}
-
-#main-menu .menu {
-    margin: 1em 0;
-    float: none;
-    background-color: #373737;
-    z-index: 200;
-    -webkit-border-radius: 4px;
-    -moz-border-radius: 4px;
-    border-radius: 4px;
-    font-size: 14px;
-}
-
-#main-menu .content {
-    padding: 0;
-}
-
-
-.megamenu-menu {
-    overflow: visible;
-    padding: 3px 0px;
-    -webkit-border-radius: 4px;
-    -moz-border-radius: 4px;
-    border-radius: 4px;
-    z-index: 10;
-    background-color: #373737;
-    margin: 0;
-}
-
-.megamenu-menu *,
-.megamenu-menu .megamenu-parent,
-.megamenu-menu .megamenu-parent-title,
-.megamenu-menu .megamenu-bin,
-.megamenu-menu .megamenu-slot,
-.megamenu-menu .megamenu-slot-title,
-.megamenu-menu .megamenu-items {
-    margin: 0;
-    padding: 0;
-    border: 0;
-    outline: 0;
-    font-size: 100%;
-    font-weight: normal;
-    vertical-align: baseline;
-    background: transparent;
-}
-
-.megamenu-menu, .megamenu-menu ul.megamenu-items {
-    list-style: none;
-}
-
-.megamenu-menu .megamenu-parent {
-    display: inline;
-    position: relative;
-    z-index: 99;
-}
-
-.megamenu-menu .megamenu-parent-title {
-    display: inline;
-}
-
-.megamenu-menu .megamenu-bin {
-    position: absolute;
-    left: 0;
-    top: -9000px;
-    z-index: 10000;
-    overflow: hidden;
-}
-
-.megamenu-menu .megamenu-bin-right {
-    left: auto;
-    right: -500px;
-}
-
-.megamenu-menu .megamenu-links-horizontal {
-    overflow: hidden;
-}
-
-.megamenu-menu .megamenu-links-horizontal li,
-.megamenu-menu .megamenu-links-horizontal li a {
-    float: left;
-}
-
-.megamenu-menu .megamenu-menu-vertical .megamenu-parent {
-    display: block;
-}
-
-.megamenu-menu ul a {
-    text-decoration: none;
-}
-
-.megamenu-menu ul a:hover {
-    text-decoration: underline;
-}
-
-.megamenu-menu .megamenu-bin {
-    padding: 0.5em;
-}
-
-.megamenu-menu .megamenu-slot {
-    width: 200px;
-    margin-bottom: 0.5em;
-    margin-right: 0.5em;
-}
-
-.megamenu-menu .megamenu-slots-columnar {
-    overflow: hidden;
-    background-color: #5C5C5C;
-}
-
-.megamenu-menu .megamenu-parent {
-    z-index: 11 !important;
-}
-
-
-.megamenu-skin-osul .first h2 a {
-    background-image: none;
-    padding-right: 17px;
-}
-
-.megamenu-skin-osul .first h2 a:hover {
-    background-image: none;
-    padding-right: 17px;
-}
-
-.megamenu-skin-osul li.active-trail a {
-    background-image: none;
-}
-
-.megamenu-skin-osul h2 a {
-    text-decoration: none;
-    display: inline;
-    color: #fff;
-    font-size: 14px;
-    margin: 0;
-    padding: 10px 47px 10px 31px;
-    background: url(//osulibrary.oregonstate.edu/sites/all/themes/doug_fir_library/images/h-menu-arrow-down.png) no-repeat right center;
-    -webkit-border-radius: 4px 4px 0 0;
-    -moz-border-radius: 4px 4px 0 0;
-    border-radius: 4px 4px 0 0;
-    font-variant: none;
-}
-
-.megamenu-skin-osul h2 a:hover {
-    background-color: #4B4B4B;
-}
-
-.megamenu-skin-osul .megamenu-bin {
-    -webkit-border-radius: 0 0 10px 10px;
-    -moz-border-radius: 0 0 10px 10px;
-    border-radius: 0 0 10px 10px;
-    list-style: none outside none;
-}
-
-.megamenu-skin-osul .megamenu-slot {
-    margin-right: 4px;
-    list-style: none outside none;
-    width: 200px;
-}
-
-.megamenu-skin-osul .megamenu-slot-title a {
-    letter-spacing: normal;
-}
-
-.megamenu-skin-osul .megamenu-item {
-    color: #fff;
-    border: none;
-}
-
-.megamenu-skin-osul .nolink {
-    background: #2F2A2B;
-    background-repeat: no-repeat;
-    color: #fff;
-    width: 165px;
-    padding: 2px 6px;
-    font-weight: normal;
-    clear: both;
-}
-
-.megamenu-skin-osul .megamenu-items {
-    letter-spacing: normal;
-    line-height: 1.5em;
-    margin: 0;
-    padding: 0 1.45em 0 0;
-}
-
-.megamenu-skin-osul .megamenu-item {
-    list-style: none outside none;
-    padding: 0.3em 0 0.3em 8px;
-}
-
-.megamenu-skin-osul .megamenu-item a {
-    color: #fff;
-    white-space: nowrap;
-}
-
-.megamenu-skin-osul .megamenu-item a.menu-185301,
-.megamenu-skin-osul .megamenu-item a.menu-229581,
-.megamenu-skin-osul .megamenu-item a.menu-229501 {
-    white-space: normal;
-}
-
-.megamenu-skin-osul .megamenu-item a:hover {
-    color: #d85a1a;
-    background-image: none;
-}
-
-.megamenu-skin-osul .megamenu-item a.active {
-    color: #ccc;
-}
-
-.megamenu-skin-osul .megamenu-item a.active:hover {
-    color: #ccc;
-    text-decoration: none;
-    cursor: text;
-}
-
-.megamenu-skin-osul .megamenu-items .last {
-    border: none;
-}
-
-.megamenu-skin-osul .megamenu-bin {
-    margin-top: 3px;
-    border: none;
-}
-
-
-h2.pane-title {
-    font-size: 20px;
-    line-height: 30px;
-}
-
-
-#backgroundcolor h2.pane-title {
-    color: #fff;
-    background: #561F4B;
-    -moz-box-shadow: -1px 1.5px 3px 0.25px #ccc;
-    -webkit-box-shadow: -1px 1.5px 3px 0.25px #ccc;
-    box-shadow: -1px 1.5px 3px 0.25px #ccc;
-    padding-left: 5px;
-    margin-bottom: 2px;
-}
-
-
-.span3 .panel-separator {
-    border: 1px dashed #CCC;
-}
-
-
-.link_description:before {
-    content: ' - ';
-}
-
-
-#megamenu-mlid-182176 .megamenu-bin {
-    padding: 1.5em 0 0 0;
-}
-
-
-#megamenu-mlid-185326 {
-    clear: both;
-    float: left;
-    margin-bottom: 0;
-    width: 100%;
-    background: repeat-x scroll left top #2F2A2B;
-    background: -moz-linear-gradient(top, #5c5c5c 0%, #252525 100%);
-    background: -webkit-linear-gradient(top, #5c5c5c 0%, #252525 100%);
-    background: -o-linear-gradient(top, #5c5c5c 0%, #252525 100%);
-    background: -ms-linear-gradient(top, #5c5c5c 0%, #252525 100%);
-    background: linear-gradient(top, #5c5c5c 0%, #252525 100%);
-    -webkit-border-radius: 0 0 10px 10px;
-    -moz-border-radius: 0 0 10px 10px;
-    border-radius: 0 0 10px 10px;
-}
-
-
-#megamenu-mlid-182176 .megamenu-slot-0 {
-    margin-left: 1em;
-}
-
-
-#megamenu-mlid-185326 h3 {
-    margin: .5em 0 .5em 1.6em;
-    font-family: 'trebuchet ms', Arial, sans-serif;
-    color: #b3ba35;
-    letter-spacing: normal;
-    font-size: 1em;
-}
-
-
-#megamenu-mlid-185326 h3 a {
-    color: #fff;
-}
-
-
-#tabs .ui-widget-header {
-    border: 0;
-    background: transparent;
-}
-
-
-#tabs.ui-tabs .ui-tabs-panel {
-    padding: 0;
-    border-left: 1px solid #4B4B4B;
-    height: 39px;
-    background: #561F4B;
-    -webkit-border-radius: 0 4px 4px 0;
-    -moz-border-radius: 0 4px 4px 0;
-    border-radius: 0 4px 4px 0;
-    position: relative;
-    z-index: 1;
-}
-
-
-#tabs .ui-corner-bottom {
-    border: 0;
-}
-
-
-.megamenu-items li:hover {
-    background-color: #4B4B4B;
-    color: #fff;
-    -webkit-border-radius: 4px;
-    -moz-border-radius: 4px;
-    border-radius: 4px;
-}
-
-
-.megamenu-items .megamenu-item a {
-    white-space: normal;
-    border: none;
-}
-
-
-.megamenu-items .megamenu-item a:hover {
-    color: #fff;
-    text-decoration: none;
-}
-
-
-.megamenu-parent {
-    margin: 0.1em 1em;
-}
-
-
-.megamenu-slot-title span.nolink {
-    -webkit-border-radius: 5px;
-    -moz-border-radius: 5px;
-    border-radius: 5px;
-    padding: 4px 20px;
-}
-
-
-.megamenu-menu-vertical {
-    width: 8em;
-}
-
-
-.megamenu-menu-vertical .megamenu-parent {
-    margin-top: 1em;
-}
-
-
-.megamenu-slots.flyright {
-    left: 7em;
-    top: 0;
-}
-
-
-.megamenu-slots.flyleft {
-    left: -16.2em;
-    top: 0;
-}
-
-
-.megamenu-slots-columnar li.megamenu-slot {
-    float: left;
-}
-
-
-#tabs-search {
-    float: right;
-    margin-top: -24px;
-    padding: 0;
-}
-
-#tabs-search a {
-    font-size: 14px;
-    height: 13px;
-    padding: 4px 15px 7px 10px;
-    -webkit-border-radius: 8px 8px 0 0;
-    -moz-border-radius: 8px 8px 0 0;
-    border-radius: 8px 8px 0 0;
-}
-
-#tabs-search form {
-    margin: 0;
-}
-
-#tabs-search form input {
-    margin: 0;
-}
-
-#tabs-search .tab-content {
-    -webkit-border-radius: 4px;
-    -moz-border-radius: 4px;
-    border-radius: 4px;
-}
-
-#tabs-search .tab-pane {
-    padding: 4px;
-    width: 265px;
-}
-
-#tabs-search .form-submit {
-    -webkit-border-radius: 4px;
-    -moz-border-radius: 4px;
-    border-radius: 4px;
-    background-color: #b13f00;
-    background-image: -moz-linear-gradient(top, #c34500, #983600);
-    background-image: -webkit-gradient(linear, 0 0, 0 100%, from(#c34500), to(#983600));
-    background-image: -webkit-linear-gradient(top, #c34500, #983600);
-    background-image: -o-linear-gradient(top, #c34500, #983600);
-    background-image: linear-gradient(to bottom, #c34500, #983600);
-    background-repeat: repeat-x;
-    filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#FFC34500', endColorstr='#FF983600', GradientType=0);
-    background: #c34500;
-    color: #fff;
-    border: none;
-    padding: 10px;
-    background: url(//osulibrary.oregonstate.edu/sites/all/themes/doug_fir_library/images/search_icon_white.png) no-repeat scroll 10px 5px #c34500;
-    box-shadow: none;
-    float: right;
-    height: 30px;
-    margin: 0;
-    width: 40px;
-    float: right;
-}
-
-#tabs-search .nav-tabs {
-    margin: 0 4px;
-}
-
-#tabs-search .nav-tabs a {
-    border: 0;
-}
-
-#osu-top-hat {
-    width: 100%;
-    height: 55px;
-    border-bottom: 3px solid #dbd6d0;
-    font-family: Gudea,Arial,Helvetica,Verdana,sans-serif;
-    background-color: #424242;
-    background-image: -moz-linear-gradient(top, #565656, #252525);
-    background-image: -webkit-gradient(linear, 0 0, 0 100%, from(#565656), to(#252525));
-    background-image: -webkit-linear-gradient(top, #565656, #252525);
-    background-image: -o-linear-gradient(top, #565656, #252525);
-    background-image: linear-gradient(to bottom, #565656, #252525);
-    background-repeat: repeat-x;
-    filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#FF565656', endColorstr='#FF252525', GradientType=0);
-}
-
-#osu-top-hat ul.menu {
-    float: left;
-    margin: 1.5em 0 0;
-    padding: 0;
-    width: auto;
-}
-
-#osu-top-hat ul.menu li.leaf {
-    float: left;
-    list-style-type: none;
-    list-style-image: none;
-    font-size: 12px;
-    margin: 0;
-    padding: 0 .5em;
-}
-
-#osu-top-hat ul.menu li.first {
-    -webkit-border-radius: 10px;
-    -moz-border-radius: 10px;
-    border-radius: 10px;
-    margin-left: 20px;
-    margin-top: -3px;
-    padding: 3px 5px 3px 37px;
-    background: url(//osulibrary.oregonstate.edu/sites/all/themes/doug_fir_library/images/askus.png) 10% 50% no-repeat transparent;
-}
-
-#osu-top-hat ul.menu li.last {
-    -webkit-border-radius: 10px;
-    -moz-border-radius: 10px;
-    border-radius: 10px;
-    margin-top: -3px;
-    padding: 3px 5px 3px 24px;
-    background: url(//osulibrary.oregonstate.edu/sites/all/themes/doug_fir_library/images/foundation.png) 10% 50% no-repeat transparent;
-}
-
-#osu-top-hat ul.menu li.first:hover, #osu-top-hat ul.menu li.first:active, #osu-top-hat ul.menu li.first:focus, #osu-top-hat ul.menu li.last:hover, #osu-top-hat ul.menu li.last:active, #osu-top-hat ul.menu li.last:focus {
-    background-color: #555;
-}
-
-#osu-top-hat ul.menu li.first a:hover, #osu-top-hat ul.menu li.first a:active, #osu-top-hat ul.menu li.first a:focus, #osu-top-hat ul.menu li.last a:hover, #osu-top-hat ul.menu li.last a:active, #osu-top-hat ul.menu li.last a:focus {
-    background-color: transparent;
-}
-
-#osu-top-hat ul.menu li a {
-    -webkit-border-radius: 10px;
-    -moz-border-radius: 10px;
-    border-radius: 10px;
-    text-decoration: none;
-    color: #fff;
-    border-radius: 10px;
-    padding: 5px 10px;
-}
-
-#osu-top-hat ul.menu li a:hover, #osu-top-hat ul.menu li a:active, #osu-top-hat ul.menu li a:focus {
-    background-color: #555;
-}
-
-#osu-top-hat .tag {
-    float: left;
-    margin-left: 1.231em;
-    margin-right: 1.5em;
-    position: relative;
-    border: none;
-    z-index: 51;
-    padding: 0;
-}
-
-#osu-top-hat .tag .mobile-header {
-    color: #fff;
-    font-weight: bold;
-    font-size: 16px;
-    display: none;
-}
-@media (max-width: 767px) {
-    
-    #osu-top-hat {
-        height: 40px;
+    #s-lg-er-nav-bottom,
+    #s-lg-hp-nav-bottom,
+    #s-lg-srch-nav-bottom {
+        background-color: #e1ded9;
+        -webkit-border-radius: 0;
+        -moz-border-radius: 0;
+        border-radius: 0;
     }
-    
-    #osu-top-hat ul.menu {
-        display: none;
+
+    #s-lg-hp-nav > ul > li {
+        padding-bottom: 0;
     }
-    
-    #osu-top-hat #mobile-icon-menu {
-        background: transparent;
-        color: #fff;
-        display: block;
-        position: absolute;
-        right: 4%;
-        text-decoration: none;
-        top: 10px;
-        z-index: 300;
+
+    #s-lg-hp-nav li#s-lg-hp-nav-bottom {
+        padding: 10px;
     }
-    
-    #osu-top-hat #mobile-icon-menu .icon-search {
-        font-size: 18px;
-    }
-}
-@media (max-width: 480px) {
-    
-    #osu-top-hat {
-        background-color: #ba4100;
-        background-image: -moz-linear-gradient(top, #c34500, #ae3d00);
-        background-image: -webkit-gradient(linear, 0 0, 0 100%, from(#c34500), to(#ae3d00));
-        background-image: -webkit-linear-gradient(top, #c34500, #ae3d00);
-        background-image: -o-linear-gradient(top, #c34500, #ae3d00);
-        background-image: linear-gradient(to bottom, #c34500, #ae3d00);
-        background-repeat: repeat-x;
-        filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#FFC34500', endColorstr='#FFAE3D00', GradientType=0);
-        background-repeat: repeat-x;
-        height: auto;
-        border-bottom: none;
-        text-align: left;
-    }
-    
-    #osu-top-hat .container {
-        padding: 10px 0 0 10px;
-    }
-    
-    #osu-top-hat .tag {
-        margin-left: 0;
-        float: none;
-    }
-    
-    #osu-top-hat .tag .logo {
-        display: none;
-    }
-    
-    #osu-top-hat .tag .mobile-header {
-        display: inline-block;
-        color: #fff;
-        font-weight: bold;
+
+    .s-lib-public-side-header {
+        color: #c34500;
+        font-family: 'Gudea', Arial, Helvetica, Verdana, sans-serif;
         font-size: 16px;
+        font-weight: normal;
+        line-height: 30px;
+        padding: 0 10px 0 2px;
+        text-transform: uppercase;
     }
-}
 
-
-#mobile-icon-menu {
-    display: none;
-}
-
-
-#common-header {
-    color: #252525;
-    font-size: 16px;
-    line-height: 22px;
-}
-
-#common-header a:focus {
-    outline: none;
-}
-
-#common-header h1, #common-header h2, #common-header h1 a {
-    font-weight: 400;
-}
-
-#common-header h1 a {
-    text-decoration: none;
-    color: #c34500;
-}
-
-#common-header h1, #common-header h2 {
-    font-family: "EksjaExtremesRegular", "Arial", "Helvetica", "Verdana", sans-serif;
-}
-
-#common-header h1 {
-    font-size: 30px;
-    line-height: 44px;
-    margin: 0px;
-    padding: 1em 0px 0px;
-}
-
-#common-header h2 {
-    line-height: 32px;
-}
-
-#common-header .tab-content {
-    overflow: hidden;
-}
-
-#header a:hover, a:active, a:focus {
-    color: #615042;
-}
-
-.word-hide {
-    text-indent: -9999em;
-}
-
-.form-submit {
-    margin-bottom: 1em;
-}
-
-.element-invisible {
-    position: absolute !important;
-    clip: rect(1px 1px 1px 1px);
-    overflow: hidden;
-    height: 1px;
-}
-@media (max-width:480px) {
-    body {
-        padding: 0;
-    }
-    #main-menu {
-        display: none;
-    }
-    #header h1 {
-        font-size: 24px;
-        line-height: 24px;
-        padding: 4px 8px 2px 10px;
-    }
-    #footer .block-menu {
-        float: none;
-    }
-    #footer .content > .menu > li {
-        display: block;
-        float: none;
-        max-width: 90%;
-        width: 95%;
-    }
-    .parent {
-        padding-left: 10px;
-    }
-    .content {
-        padding: .4em;
-    }
-}
-@media (min-width:481px) and (max-width:767px) {
-    #osu-top-hat ul.menu {
-        margin-left: -24px;
-        margin-top: 34px !important;
-    }
-    #osu-top-hat ul.menu li.leaf {
-        padding: 0 .3em;
-    }
-    #header {
-        margin-bottom: 10px;
-    }
-    #header h1 {
-        padding-left: 135px;
-        padding-top: .1em;
-    }
-}
-@media (max-width:767px) {
-    #main-menu {
-        display: none;
-    }
-    a.m-icon-link {
-        color: #fff;
-        padding: 11px 13px 9px;
+    button.btn,
+    a.btn.btn-primary,
+    a.btn.btn-info {
         text-decoration: none;
-    }
-    a.m-icon-link:hover,a.m-icon-link:active,a.m-icon-link:focus {
-        background-color: #373737;
-    }
-    #osu-top-hat {
-        height: 40px;
-    }
-    #osu-top-hat ul.menu {
-        display: none;
-    }
-    #osu-top-hat ul.menu li a.campaign {
+        background-color: #c34500;
         background-image: none;
-        padding-left: .2em;
+        color: #ffffff;
+        font-size: 16px;
+        padding: 8px 14px;
+        border: none;
+        -webkit-border-radius: 0;
+        -moz-border-radius: 0;
+        border-radius: 0;
     }
-    #osu-top-hat .utility,#osu-top-hat form.search {
+
+    button.btn:hover,
+    button.btn:active,
+    button.btn:focus,
+    a.btn.btn-primary:hover,
+    a.btn.btn-primary:focus,
+    a.btn.btn-primary:active,
+    a.btn.btn-info:hover,
+    a.btn.btn-info:focus,
+    a.btn.btn-info:active {
+        text-decoration: underline;
+        transition: none;
+        -webkit-transition: none;
+        background: none;
+        background-color: #000000;
+        color: #ffffff;
+        border: none;
+        -webkit-border-radius: 0;
+        -moz-border-radius: 0;
+        border-radius: 0;
+    }
+
+    .s-lg-public-search-field button.btn.btn-default {
+        padding: 4px 10px;
+    }
+
+    .nav > li > a:hover, .nav > li > a:focus {
+        outline: none;
+    }
+
+    /* Guide pages */
+    #s-lg-tabs-container .nav-tabs > .active > a,
+    #s-lg-tabs-container .nav-pills > .active > a,
+    #s-lg-tabs-container .nav-tabs > li > a:hover,
+    #s-lg-tabs-container .nav-pills > li > a:hover {
+        background-color: #c34500;
+        color: #ffffff;
+    }
+
+    #s-lg-tabs-container .nav-tabs > li > a,
+    #s-lg-tabs-container .nav-pills > li > a {
+        background-color: #000000;
+    }
+
+    .s-lib-box {
+        border-radius: 0;
+    }
+
+    .s-lib-box > h2.s-lib-box-title {
+        color: #c34500;
+        text-transform: uppercase;
+        background: none;
+        background-color: #f5f2ed;
+    }
+
+    .s-lib-footer {
+        background-color: #f5f2ed;
+    }
+
+    #s-lib-public-main .txt {
+        font-size: 14px;
+        padding-bottom: 5px;
+    }
+
+    #s-lg-guide-header-search {
         display: none;
     }
-    #mobile-icon-menu {
-        background: transparent;
-        color: #fff;
-        display: block;
-        position: absolute;
-        right: 4%;
-        text-decoration: none;
-        top: 10px;
-        z-index: 300;
-    }
-    #mobile-icon-menu .icon-search {
-        font-size: 18px;
-    }
-    #mobile-menu {
-        background: #373737;
-        margin-left: 0;
-    }
-    #mobile-menu li {
-        list-style: none !important;
-        margin: 0;
-        padding: 0;
-    }
-    #mobile-menu ul {
-        margin-left: 0;
-    }
-    #mobile-menu ul li a {
-        color: #fff;
-        display: block;
-        line-height: 40px;
-        padding-left: 10px;
-        text-decoration: none;
-    }
-    #mobile-menu ul li a + ul {
-        display: none;
-    }
-    #mobile-menu ul li a.active {
-        font-weight: bold;
-    }
-    #mobile-menu ul li a.active + ul {
-        display: block;
-    }
-    #mobile-menu #mobile-main-menu > ul > li + li {
-        border-top: 1px solid #474747;
-    }
-    #mobile-menu #mobile-main-menu .active + .menu {
-        background-color: #303030;
-        background-image: linear-gradient(top,#373737,#252525);
-        background-image: -moz-linear-gradient(top,#373737,#252525);
-        background-image: -ms-linear-gradient(top,#373737,#252525);
-        background-image: -o-linear-gradient(top,#373737,#252525);
-        background-image: -webkit-gradient(linear,0 0,0 100%,from(#373737),to(#252525));
-        background-image: -webkit-linear-gradient(top,#373737,#252525);
-        background-repeat: repeat-x;
-        filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#373737',endColorstr='#252525',GradientType=0);
-    }
-    #mobile-menu #mobile-osu-top-hat {
-        background: #1b1b1b;
-        padding-top: 10px;
-    }
-    #mobile-menu #mobile-osu-top-hat li {
-        display: inline-block;
-        padding: 0;
-        text-align: center;
-        vertical-align: top;
-        width: 18.2%;
-    }
-    #mobile-menu #mobile-osu-top-hat li a {
-        font-size: 12px;
-        line-height: 12px;
-        margin: 0 auto;
-        padding-bottom: 20px;
-        padding-top: 20px;
-    }
-    #mobile-menu #mobile-osu-top-hat li i {
-        color: #acacac;
-        font-size: 40px;
-        line-height: 35px;
-        margin-bottom: 4px;
-    }
-    #mobile-menu #mobile-osu-top-hat li:last-child i {
-        color: #d85a1a;
-    }
-    #main-menu,.tag + .menu {
-        display: none;
-    }
-    #main-menu .menu li,#main-menu .nice-menu > li {
-        float: none;
-    }
-    #main-menu .menu li a,#main-menu .nice-menu > li > a {
-        border-bottom: 1px dotted #666;
-        display: block;
-    }
-    #main-menu .menu li:last-child a,#main-menu .nice-menu > li:last-child > a {
-        border-bottom: none;
-    }
-    #main-menu .nice-menu > li > a:hover ul,#main-menu .nice-menu > li:hover ul,#main-menu .nice-menu li:hover ul,#main-menu .nice-menu li ul {
-        display: none !important;
-    }
-    #main-menu .nice-menu > li.menuparent > a,.classic #main-menu .nice-menu > li.menuparent > a {
-        background-image: none;
-    }
-    #main-column1 > div,#main-column2 > div {
-        margin: 0;
-    }
-    #footer {
-        background: #e5e2dd;
-        color: #252525;
-        padding: 12px;
-    }
-    #footer h2,#footer h3 {
-        color: #252525;
-    }
-    #footer a {
-        color: #252525;
-    }
-    #footer a:hover,#footer a:active,#footer a:focus {
-        color: #fff;
-    }
-    #footer .content > .menu {
-        background: #575757;
-        border-radius: 4px;
-        margin-top: 20px;
-        moz-border-radius: 4px;
-        webkit-border-radius: 4px;
-    }
-    #footer .content > .menu > li {
-        display: block;
-        margin-left: 0;
-        max-width: 100%;
-        padding-left: 10px;
-        padding-top: 0;
-        width: 100%;
-    }
-    #footer .content > .menu > li > a {
-        background: #373737;
-        line-height: 28px;
-        padding-left: 10px;
-    }
-    #footer .content > .menu > li.expanded {
-        margin-bottom: 12px;
-    }
-    #footer .content .menu li {
-        margin: 0;
-        padding: 0;
-    }
-    #footer .content .menu a {
-        color: #fff;
-        line-height: 22px;
-        padding-left: 10px;
-    }
-    .classic #main-menu .nice-menu > li.menuparent:hover > a,.classic #main-menu .nice-menu > li.menuparent > a:hover,.classic #main-menu .nice-menu > li.menuparent > a:active,.classic #main-menu .nice-menu > li.menuparent > a:focus {
-        background-color: #eee;
-        background-image: none;
-    }
-    .science #main-menu .nice-menu > li + li,.science #main-menu .menu li + li {
-        border-left: none;
-    }
-}
-@media (min-width:768px) {
-    #main-menu {
-        display: block !important;
-    }
-    #mobile-menu {
-        display: none !important;
-    }
-}
-@media (min-width:768px) and (max-width:979px) {
-    #osu-top-hat .utility {
-        display: none;
-    }
-    #osu-top-hat ul.menu {
-        margin: 0.8em 0 0 -2em;
-    }
-    .megamenu-skin-osul h2 a {
-        padding:10px 32px 10px 16px;
-    }
 
-}
-@media (max-width:979px) {
-    body:before {
-        display: none;
-    }
-    #features .content {
-        box-shadow: 0 1px 3px rgba(0,0,0,0.3);
-    }
-}
-@media (max-width:979px) {
-    body {
-        padding: 0;
-    }
-}
-.osu-purple {
-    /*.nav-tabs > li {
-      margin: 0 10px;
-    }*/
-}
-
-.osu-purple .title,
-.osu-purple .widget-title {
-    background-color: #561f4b;
-    color: white;
-}
-
-.osu-purple .nav-tabs > li > a, .osu-purple .nav-tabs > li > a:hover, .osu-purple .nav-tabs > li > a:focus {
-    background-color: #4b4b4b;
-    color: white;
-    transition: all 0.25s ease-in-out;
-    border: none;
-}
-
-.osu-purple .nav-tabs > li > a:hover, .osu-purple .nav-tabs > li > a:focus {
-    box-shadow: 0 0 5px #212121;
-}
-
-.osu-purple .nav-tabs > li.active > a, .osu-purple .nav-tabs > li.active > a:hover, .osu-purple .nav-tabs > li.active > a:focus {
-    background-color: #561f4b;
-    color: white;
-    box-shadow: none;
-}
-
-.osu-purple .nav-tabs {
-    border-bottom: 1px solid #561f4b;
-}
-
-.osu-purple .osu-background {
-    background-color: #561f4b;
-    color: white;
-}
-
-.nav {
-    margin-bottom: 0;
-}
-div.tab-content {
-    height: 45px;
-}
-div.right-tabs {
-    width: 450px;
-    float: right;
-    margin-top: -28px;
-}
-.right-tabs .nav {
-    float: right;
-    border-bottom: 0px;
-    margin-right: 15px;
-}
-.right-tabs .nav li {
-    float: left;
-    background-color: #666666;
-    margin-left: 5px;
-}
-.right-tabs .tab-content {
-    float: left;
-    border-top: 1px solid #ddd;
-    margin-top: -1px;
-    color: #FFFFFF;
-    background-color: #403152;
-    padding: 7px;
-    width: 100%;
-}
-input#query_temp, input#query_temp_reserve {
-    width: 80%;
-    color: #000000;
-    height: 25px;
-}
-
-form#osul-search-library-form {
-	float: left;
-	width: 75%;
-	margin: 0;
-}
-div.search-links {
-	display: inline-block;
-	width: 25%;
-}
-
-.search-links > a {
-	font-size: 0.7em;
-	font-weight: normal;
-	color: #FFFFFF;
-	text-decoration: none;
-	display: block;
-	margin: 0 0 0 5;
-	padding: 0;
-	line-height: 16px;
-}
-
-.form-submit {
-    color: #FFF;
-    background-color: #C34500;
-    border: none;
-    margin-top: 3px;
-}
-.nav-pills > li > a {
-    color: #403152;
-}
-.nav-pills > li > a:hover {
-    background-color: #C34500;
-}
-.nav-pills > li.active {
-    background-color: #403152;
-}
-.nav-pills > li.active > a, .nav-pills > li.active > a:hover, .nav-pills > li.active > a:focus {
-    background-color: #403152;
-}
-.nav > li > a {
-    padding-top: 4px;
-    padding-bottom: 4px;
-    color: #FFFFFF;
-    text-decoration: none;
-}
-ul.nav {
-    font-size: 0.85em;
-}
-</style>
-<script type="text/javascript">
-$(document).ready(function () {
-    
-    searchSubmit = function (event, url) {
-        // Stitch together the search string
-        event.preventDefault();
-        var extra = '';
-        if ($(this).closest('form[id]').attr('id') == 'osul-search-library-form') {
-            $('input[name=query]').val('any,contains,' + $('input[name=query_temp]').val().replace(/,/g, ' '));
-        } else {
-            extra = '&query=any,contains,' + $('input[name=query_temp_reserve]').val().replace(/,/g, ' ');
+    @media (min-width: 1200px) {
+        .row {
+            margin-left: -10px;
+            margin-right: -10px;
         }
-        window.location = "http://search.library.oregonstate.edu/primo_library/libweb/action/dlSearch.do?" + $(this).serialize() + extra;
-    };
-    
-    $('#osul-search-library-form').submit(searchSubmit);
-    $('#osul-search-reserves-form').submit(searchSubmit);
-    
-});
-</script>
+    }
+
+    @media (max-width: 767px) {
+        #osu-top-hat a {
+            color: #ffffff;
+            text-decoration: none;
+        }
+        
+        #osu-top-hat a:hover {
+            text-decoration: underline;
+        }
+    }
+
+    #mobile-menu {
+        margin-left: -80px;
+        padding-right: 20px;
+    }
+</style>
+<script type="text/javascript" src="//osulibrary.oregonstate.edu/sites/all/themes/doug-fir-drupal-7/js/menus.js"></script>
