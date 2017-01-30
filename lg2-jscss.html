@@ -307,16 +307,19 @@
         display: none;
     }
 
-    .s-ui-helptip button.btn {
+    .s-ui-helptip button.btn.btn-help-popover {
       background-color: #ffffff;
+    }
 
+    .s-ui-helptip button.btn.btn-help-popover:focus {
+      outline: dotted 2px #ffffff;
     }
 
     .s-ui-helptip i.fa.fa-info-circle:hover {
       color: #000000;
     }
 
-    i.s-ui-helptip i.fa.fa-info-circle {
+    .s-ui-helptip i.fa.fa-info-circle {
       color: #c34500;
     }
 
@@ -329,6 +332,11 @@
 
     #s-lg-az-index .btn:hover {
       color: #000000;
+    }
+
+    #s-lg-az-index .btn:focus {
+      color: black;
+      outline: dotted 2px #ffffff;
     }
 
     .s-lg-az-result-share .btn-link {
